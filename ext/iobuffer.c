@@ -587,8 +587,9 @@ static int buffer_read_from(struct buffer *buf, int fd)
 		}
 		
 		total_bytes_read += bytes_read; 
-		buf->tail->end += nbytes;
-		buf->size += nbytes;
+		buf->tail->end += bytes_read;
+		buf->size += bytes_read;
+
 		
 		if(buf->tail->end == buf->node_size) {
       buf->tail->next = buffer_node_new(buf);
