@@ -2,16 +2,16 @@ require 'rubygems'
 
 GEMSPEC = Gem::Specification.new do |s|
   s.name = "iobuffer"
-  s.version = "0.1.1"
+  s.version = "0.1.3"
   s.authors = "Tony Arcieri"
   s.email = "tony@medioh.com"
-  s.date = "2009-08-28"
+  s.date = "2009-11-28"
   s.summary = "Fast C-based buffer for non-blocking I/O"
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>= 1.8.6'
 
   # Gem contents
-  s.files = Dir.glob("{lib,ext,spec,tasks}/**/*") + ['Rakefile', 'iobuffer.gemspec']
+  s.files = Dir.glob("{lib,ext,spec,tasks}/**/*.{rb,c}") + ['Rakefile', 'iobuffer.gemspec']
 
   # RubyForge info
   s.homepage = "http://rev.rubyforge.org"
